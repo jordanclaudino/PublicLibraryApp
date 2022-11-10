@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">PublicLibrary</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="client_toolbar">Clientes</string>
+    <string name="book_toolbar">Livros</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    
+    <string name="client_menu">CLIENTES</string>
+    <string name="book_menu">LIVROS</string>
+    <string name="loan_menu">NOVO EMPRESTIMO</string>
+    <string name="about_menu">SOBRE</string>
+    <string name="return_menu">DEVOLUÇÃO</string>
+</resources>

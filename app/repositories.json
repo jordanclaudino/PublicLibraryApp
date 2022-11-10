@@ -1,0 +1,9 @@
+
+{
+  "cpf": "string",
+  "nome": "string",
+  "endereco": {
+    "cep": "string"
+  }
+}
+

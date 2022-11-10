@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="@dimen/half_padding"
+    app:cardElevation="@dimen/half_padding"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_book"
+            android:layout_width="90dp"
+            android:layout_height="110dp"
+            tools:srcCompat="@tools:sample/avatars"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_book_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/half_padding"
+            android:layout_marginStart="@dimen/half_padding"
+            android:layout_marginEnd="@dimen/half_padding"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_book"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Harry Potter" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_book_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/half_padding"
+            android:layout_marginEnd="@dimen/half_padding"
+            android:layout_marginBottom="@dimen/half_padding"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/iv_book"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="Código:"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_book_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/half_padding"
+            android:layout_marginEnd="@dimen/half_padding"
+            android:layout_marginBottom="@dimen/half_padding"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/tv_book_code"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="15554"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_book"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginBottom="@dimen/half_padding"
+            app:chipIcon="@drawable/ic_baseline_menu_book_24"
+            app:chipIconTint="@color/avaliable"
+            app:chipBackgroundColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
