@@ -7,6 +7,9 @@ import retrofit2.http.POST
 import retrofit2.http.Path
 
 interface LoanServices {
+    @GET("/emprestimo")
+    suspend fun findAll(): List<Loan>
+
     @POST("/emprestimo")
     suspend fun addLoan(cpfClient: String, idBook: Long)
 
