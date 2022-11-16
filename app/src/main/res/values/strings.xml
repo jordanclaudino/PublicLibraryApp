@@ -18,4 +18,6 @@
     <string name="loan_menu">EMPRESTIMOS</string>
     <string name="about_menu">SOBRE</string>
     <string name="return_menu">DEVOLUÇÃO</string>
+    <string name="txt_search">Pesquisar</string>
+    <string name="txt_type_cpf">Digite CPF</string>
 </resources>

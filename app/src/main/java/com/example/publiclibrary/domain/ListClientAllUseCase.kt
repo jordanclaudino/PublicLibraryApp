@@ -5,10 +5,9 @@ import com.example.publiclibrary.data.model.Client
 import com.example.publiclibrary.data.repositories.ClientRepository
 import kotlinx.coroutines.flow.Flow
 
-class ListClientRepositoryUseCase(private val repository: ClientRepository)
-    : UseCase<String, List<Client>>(){
-
-    override suspend fun execute(param: String): Flow<List<Client>> {
-        return repository.listClient(param)
+class ListClientAllUseCase(private val repository: ClientRepository)
+    : UseCase<UseCase.None, List<Client>>() {
+    override suspend fun execute(param: None): Flow<List<Client>> {
+        return repository.listAllClient()
     }
 }

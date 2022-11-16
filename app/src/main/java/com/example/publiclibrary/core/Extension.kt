@@ -1,12 +1,11 @@
 package com.example.publiclibrary.core
 
 import android.app.Activity
-
+import android.app.AlertDialog
 import android.content.Context
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.ProgressBar
-import androidx.appcompat.app.AlertDialog
 import com.example.publiclibrary.R
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.textfield.TextInputLayout
@@ -22,14 +21,14 @@ fun View.hideSoftKeyboard() {
     imm.hideSoftInputFromWindow(windowToken, 0)
 }
 
-fun Context.createDialog(block: MaterialAlertDialogBuilder.() -> Unit = {}): AlertDialog {
+fun Context.createDialog(block: MaterialAlertDialogBuilder.() -> Unit = {}): androidx.appcompat.app.AlertDialog {
     val builder = MaterialAlertDialogBuilder(this)
     builder.setPositiveButton(android.R.string.ok, null)
     block(builder)
     return builder.create()
 }
 
-fun Context.createProgressDialog(): AlertDialog {
+fun Context.createProgressDialog(): androidx.appcompat.app.AlertDialog {
     return createDialog {
         val padding = this@createProgressDialog.resources.getDimensionPixelOffset(R.dimen.half_padding)
         val progressBar = ProgressBar(this@createProgressDialog)

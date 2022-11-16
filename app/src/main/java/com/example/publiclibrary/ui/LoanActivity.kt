@@ -7,7 +7,8 @@ import com.example.publiclibrary.R
 class LoanActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_book)
+        setContentView(R.layout.activity_loan)
+
     }
 
 }

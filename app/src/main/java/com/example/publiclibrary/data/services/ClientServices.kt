@@ -4,6 +4,9 @@ import com.example.publiclibrary.data.model.Client
 import retrofit2.http.*
 
 interface ClientServices {
+    @GET("/cliente")
+    suspend fun getAllClients (): List<Client>
+
     @GET("/cliente/{cpf}")
     suspend fun findByCPF(@Path("cpf") cpf: String): List<Client>
 

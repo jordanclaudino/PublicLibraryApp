@@ -7,13 +7,24 @@ import kotlinx.coroutines.flow.flow
 import retrofit2.HttpException
 
 class ClientRepositoryImpl(private val service: ClientServices): ClientRepository {
-    override suspend fun listClient(cpf: String) =  flow {
+
+    override suspend fun getClient(cpf: String) =  flow {
         try {
-            val clientList = service.findByCPF(cpf)
-            emit(clientList)
+            val clientInfo = service.findByCPF(cpf)
+            emit(clientInfo)
         } catch (ex: HttpException){
             throw RemoteException(ex.message ?: "Não foi possível realizar a busca!")
         }
     }
+
+    override suspend fun listAllClient()= flow {
+        try {
+            val clientList = service.getAllClients()
+            emit(clientList)
+        } catch (ex: HttpException){
+            throw RemoteException(ex.message ?: "Erro de Busca")
+        }
+    }
+
 
 }
