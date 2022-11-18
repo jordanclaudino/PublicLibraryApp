@@ -1,6 +1,7 @@
 package com.example.publiclibrary.core
 
 import kotlinx.coroutines.flow.Flow
+import org.json.JSONObject
 
 abstract class UseCase<Param, Source> {
     abstract suspend fun execute(param: Param): Flow<Source>
@@ -10,7 +11,7 @@ abstract class UseCase<Param, Source> {
     abstract class NoParam<Source> : UseCase<None, Flow<Source>>(){
         abstract suspend fun execute(): Flow<Source>
 
-        final override suspend fun execute(param: None) = throw UnsupportedOperationException()
+        final override suspend fun execute(param: None): Flow<Flow<Source>> = throw UnsupportedOperationException()
 
         suspend operator fun invoke(): Flow<Source> = execute()
     }

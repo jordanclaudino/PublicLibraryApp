@@ -14,7 +14,7 @@ object ClientPresentationModule {
 
     private fun viewModelModule(): Module {
         return module {
-            viewModel { ClientViewModel(get(), get()) }
+            viewModel { ClientViewModel(get(), get(), get()) }
         }
 
     }

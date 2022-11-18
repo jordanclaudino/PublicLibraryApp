@@ -17,7 +17,7 @@ object BookDataModule {
     private const val OK_HTTP = "OkHttp"
 
     fun load(){
-        loadKoinModules(networkModules() + repositoriesModule())
+        loadKoinModules(networkModules() + booksModule())
     }
 
     private fun networkModules(): Module{
@@ -43,7 +43,7 @@ object BookDataModule {
         }
     }
 
-    private fun repositoriesModule(): Module {
+    private fun booksModule(): Module {
         return module {
             single<BookRepository> { BookRepositoryImpl(get()) }
         }

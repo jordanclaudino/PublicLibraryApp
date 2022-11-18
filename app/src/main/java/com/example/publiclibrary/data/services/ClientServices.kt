@@ -1,7 +1,14 @@
 package com.example.publiclibrary.data.services
 
+
+import com.example.publiclibrary.data.model.Adress
 import com.example.publiclibrary.data.model.Client
+import okhttp3.RequestBody
+import org.json.JSONObject
+import retrofit2.Call
+import retrofit2.Response
 import retrofit2.http.*
+
 
 interface ClientServices {
     @GET("/cliente")
@@ -13,11 +20,6 @@ interface ClientServices {
     @PUT("/cliente/cpf")
     //TODO
 
-    @POST("/cliente")
-    suspend fun addClient()
-
-    @DELETE("/cliente/delete/{cpf}")
-    suspend fun deleteClient(@Path("cpf") cpf: String)
-
-
+    @POST("/cliente/create")
+    suspend fun addClient(jsonObject: JSONObject)
 }

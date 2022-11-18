@@ -21,7 +21,7 @@ object LoanDataModule {
     private const val OK_HTTP = "OkHttp"
 
     fun load(){
-        loadKoinModules(networkModules() + repositoriesModule())
+        loadKoinModules(networkModules() + loansModule())
     }
 
     private fun networkModules(): Module {
@@ -47,7 +47,7 @@ object LoanDataModule {
         }
     }
 
-    private fun repositoriesModule(): Module {
+    private fun loansModule(): Module {
         return module {
             single<LoanRepository> { LoanRepositoryImpl(get()) }
         }

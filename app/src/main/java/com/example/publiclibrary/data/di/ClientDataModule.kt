@@ -5,6 +5,7 @@ import com.example.publiclibrary.data.repositories.ClientRepository
 import com.example.publiclibrary.data.repositories.implementations.ClientRepositoryImpl
 import com.example.publiclibrary.data.services.ClientServices
 import com.google.gson.GsonBuilder
+import get
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.core.context.loadKoinModules

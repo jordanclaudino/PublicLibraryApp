@@ -7,4 +7,13 @@ data class Adress(
     val bairro: String,
     val localidade: String,
     val uf: String
-)
+){
+    override fun toString(): String {
+        return "CEP: $cep \n" +
+                "Logradouro: $logradouro \n" +
+                "Complemento: $complemento \n" +
+                "Bairro: $bairro \n" +
+                "Localidade: $localidade \n" +
+                "UF: $uf"
+    }
+}

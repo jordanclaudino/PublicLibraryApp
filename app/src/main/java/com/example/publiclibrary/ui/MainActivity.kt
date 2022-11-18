@@ -16,7 +16,6 @@ import com.example.publiclibrary.presentation.di.ClientPresentationModule
 
 class MainActivity : AppCompatActivity() {
 
-    private val dialog by lazy { createProgressDialog()}
     private val binding by lazy{ ActivityMainBinding.inflate(layoutInflater)}
 
     override fun onCreate(savedInstanceState: Bundle?) {
