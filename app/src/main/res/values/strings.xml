@@ -25,4 +25,5 @@
     <string name="hint_cep">CEP</string>
     <string name="txt_save">SALVAR</string>
     <string name="cover">Cover</string>
+    <string name="isbn_hint">Digite o ISBN</string>
 </resources>

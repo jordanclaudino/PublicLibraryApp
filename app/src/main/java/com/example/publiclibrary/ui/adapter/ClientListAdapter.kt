@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.publiclibrary.data.model.Client
 import com.example.publiclibrary.databinding.RepoClientBinding
 
-class ClientListAdapter : ListAdapter<Client, ClientListAdapter.ViewHolder>(DiffCallback()) {
+class ClientListAdapter : ListAdapter<Client, ClientListAdapter.ViewHolder>(ClientDiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val inflater = LayoutInflater.from(parent.context)
@@ -38,7 +38,7 @@ class ClientListAdapter : ListAdapter<Client, ClientListAdapter.ViewHolder>(Diff
             }
 }
 
-class DiffCallback : DiffUtil.ItemCallback<Client>(){
+class ClientDiffCallback : DiffUtil.ItemCallback<Client>(){
     override fun areItemsTheSame(oldItem: Client, newItem: Client) = oldItem == newItem
     override fun areContentsTheSame(oldItem: Client, newItem: Client) = oldItem.cpf == newItem.cpf
 

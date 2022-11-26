@@ -15,6 +15,7 @@ import com.example.publiclibrary.databinding.ActivityClientBinding
 import com.example.publiclibrary.databinding.LayoutClientAddBinding
 import com.example.publiclibrary.presentation.ClientViewModel
 import com.example.publiclibrary.ui.adapter.ClientListAdapter
+import com.example.publiclibrary.util.Mask
 import org.json.JSONObject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -63,6 +64,9 @@ class ClientActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
             val dialogpop = Dialog(this)
             val bindingpop by lazy { LayoutClientAddBinding.inflate(layoutInflater) }
             dialogpop.setContentView(bindingpop.root)
+
+            bindingpop.etxtCpf.addTextChangedListener(Mask.mask("###.###.###-##", bindingpop.etxtCpf))
+            bindingpop.etxtCep.addTextChangedListener(Mask.mask("#####-##", bindingpop.etxtCep))
 
             bindingpop.vClose.setOnClickListener {
                 dialogpop.dismiss()

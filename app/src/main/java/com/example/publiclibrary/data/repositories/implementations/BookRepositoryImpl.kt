@@ -16,5 +16,15 @@ class BookRepositoryImpl(private val service: BookServices) : BookRepository{
         }
     }
 
+    override suspend fun listAllBooks() = flow {
+        try {
+            val clientList = service.getAllBooks()
+            emit(clientList)
+        } catch (ex: HttpException){
+            throw RemoteException(ex.message ?: "Erro de Busca")
+        }
+
+    }
+
 
 }

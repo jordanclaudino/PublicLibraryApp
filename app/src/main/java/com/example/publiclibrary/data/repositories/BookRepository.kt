@@ -5,4 +5,6 @@ import kotlinx.coroutines.flow.Flow
 
 interface BookRepository {
     suspend fun listBooks(id : Long): Flow<List<Book>>
+
+    suspend fun listAllBooks(): Flow<List<Book>>
 }

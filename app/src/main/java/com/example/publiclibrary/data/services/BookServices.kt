@@ -11,9 +11,8 @@ interface BookServices {
     suspend fun findById(@Path("id") id: Long): List<Book>
 
     @POST("/livro")
-    suspend fun addBook(id: Long)
+    suspend fun addBook(isbn: Long)
 
-    @DELETE("/livro/delete/{id}")
-    suspend fun deleteBook(@Path("id") id: Long)
-
+    @GET("/livro")
+    suspend fun getAllBooks(): List<Book>
 }

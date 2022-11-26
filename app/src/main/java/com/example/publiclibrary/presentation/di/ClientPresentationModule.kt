@@ -9,10 +9,10 @@ import org.koin.dsl.module
 object ClientPresentationModule {
 
     fun load(){
-        loadKoinModules(viewModelModule())
+        loadKoinModules(clientViewModelModule())
     }
 
-    private fun viewModelModule(): Module {
+    private fun clientViewModelModule(): Module {
         return module {
             viewModel { ClientViewModel(get(), get(), get()) }
         }
